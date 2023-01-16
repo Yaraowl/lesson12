@@ -1,0 +1,21 @@
+plugins {
+ 	id 'war'
+    id 'java-library'
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    api 'org.apache.commons:commons-math3:3.6.1' 
+    api 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+}
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
